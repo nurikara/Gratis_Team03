@@ -1,11 +1,11 @@
 Feature: Kullanici favori ürünlerim kisminda listeleme/düzenleme ve silme islemleri yapabilmeli
 
   Scenario:
-    Given Kullanici siteye gider
-    Then Giris Yap butonuna tiklar
-    Then Açilan menüden"Giris Yap" secenegine tiklar
-    Then Kayitli oldugu eposta veya ceptelefonunu ve sifreyi girer
-    Then Giriş Yap butonuna tiklar
+    Given Kullanici adres cubuguna url yazar
+    Then Giris buttonuna tiklar ve giris yap segmesinin gorunur oldugunu dogrular
+    Then acilan dropdown menudeki giris yap segmesine tiklar
+    Then "Telefon" ve "sifre" bilgileri doldurulur
+    Then login buttonuna basilir
     Then Arama kutusuna "şampuan" yazar ve cikan ilk urune tiklar
     Then Acilan sayfadaki favori butonuna tiklar ve urunu favorilerim'e ekler
     Then Acilan ilk pencerede zorunlu olan "istek listesi" kismina "sampuan" yazar ve ekle butonuna tiklar
