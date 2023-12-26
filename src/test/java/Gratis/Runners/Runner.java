@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
                            "rerun:TestOutput/failed_scenario.txt"},
         features = "src/test/resources",
         glue = {"Gratis/StepDefinitions", "Gratis/Hooks"},
-        tags = "@amazon",
-        dryRun = false,
+        tags = "@gratis",
+        dryRun = true,
         monochrome = true
 
 )
