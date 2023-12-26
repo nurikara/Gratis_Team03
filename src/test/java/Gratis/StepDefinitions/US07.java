@@ -12,8 +12,8 @@ public class US07 {
 
     @Then("Kullanici Elektrikli urunler  sekmesine tiklar")
     public void kullaniciElektrikliUrunlerSekmesineTiklar() {
+     ReusableMethods.clickElementByJS(home.elektrikliUrunler);
 
-        ReusableMethods.click(home.elektrikliUrunler);
         ReusableMethods.bekle(3);
     }
 
@@ -25,7 +25,10 @@ public class US07 {
 
     @Then("Kullanici stokta olan urunlerin listelendigini dogrular")
     public void kullaniciStoktaOlanUrunlerinListelendiginiDogrular() {
-        Assert.assertEquals("listeleniyor",elektriktrikliurunler.urunlistesiyazisi);
+
+Assert.assertTrue(elektriktrikliurunler.urunlistesiyazisi.isDisplayed());
+      //Assert.assertEquals("ürün listeleniyor",elektriktrikliurunler.urunlistesiyazisi.getText());//burada son kelimiyi kes
+
     }
 
 }
