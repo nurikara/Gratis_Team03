@@ -1,15 +1,20 @@
 package Gratis.StepDefinitions;
 
 import Gratis.Pages.Home_Page;
+import Gratis.Pages.Login_Page;
 import Gratis.Utilities.ConfigReader;
 import Gratis.Utilities.Driver;
+import Gratis.Utilities.ReusableMethods;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
+import javax.swing.text.Utilities;
+
 public class login {
 
     Home_Page home = new Home_Page();
+    Login_Page login = new Login_Page();
 
 
     @Given("Kullanici adres cubuguna url yazar")
@@ -31,18 +36,46 @@ public class login {
     }
     @Then("acilan pencerede eposta ve sifre kutucuklarinin gorunur oldugunu dogrular")
     public void acilan_pencerede_eposta_ve_sifre_kutucuklarinin_gorunur_oldugunu_dogrular() {
-        System.out.println("Bos");
+
+        Assert.assertTrue(login.mail.isDisplayed());
+        Assert.assertTrue(login.password.isDisplayed());
+
+
+
+
     }
-    @Then("telefon numarasi ve sifre bilgileri doldurulur")
-    public void telefon_numarasi_ve_sifre_bilgileri_doldurulur() {
-        System.out.println("Bos");
+
+    @Then("kullanici hesaptan cikis yapar")
+    public void kullanici_hesaptan_cikis_yapar() {
+       home.logout.click();
     }
+    @Then("{string} ve {string} bilgileri doldurulur")
+    public void ve_bilgileri_doldurulur(String string, String string2) {
+       login.mail.sendKeys(string);
+       login.password.sendKeys(ConfigReader.getProperty("password"));
+
+    }
+
+
+
     @Then("login buttonuna basilir")
     public void login_buttonuna_basilir() {
-        System.out.println("Bos");
+        ReusableMethods.scrollEnd();
+
+
+        login.girisYap.click();
+
 }
     @Then("Acilan pencerede kullanici segmesinde kendi isminin gorunur oldugunu dogrular")
     public void acilan_pencerede_kullanici_segmesinde_kendi_isminin_gorunur_oldugunu_dogrular() {
-        System.out.println("Bos");
+
+        ReusableMethods.bekle(5);
+
+        String kullaciadi = home.kullaniciAdi.getText();
+
+        System.out.println("kullaciadi = " + kullaciadi);
+
+        Assert.assertEquals("Nuri Kara",kullaciadi);
+
     }
 }
