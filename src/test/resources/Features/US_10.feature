@@ -2,8 +2,8 @@ Feature: Kullanici favori ürünlerim kisminda listeleme/düzenleme ve silme isl
 
   Scenario:
     Given Kullanici adres cubuguna url yazar
-    Then Giris buttonuna tiklar ve giris yap segmesinin gorunur oldugunu dogrular
-    Then acilan dropdown menudeki giris yap segmesine tiklar
+    Then Giris buttonuna tiklar ve giris yap sekmesinin gorunur oldugunu dogrular
+    Then acilan dropdown menudeki giris yap sekmesine tiklar
     Then "Telefon" ve "sifre" bilgileri doldurulur
     Then login buttonuna basilir
     Then Arama kutusuna "şampuan" yazar ve cikan ilk urune tiklar

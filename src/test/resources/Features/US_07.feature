@@ -6,8 +6,8 @@ Feature: Kullanici Elektronik Urunler kategorisinde stokta olan tum urunleri lis
     Then acilan dropdown menudeki giris yap sekmesine tiklar
     Then "mail" ve "sifre" bilgileri doldurulur
     Then login buttonuna basilir
-    Then Kullanici "Elektrikli Ürünler" sekmesine tiklar
-    Then Kullanici "Stokta Var" kutucuguna tiklar
-    Then Kullanici stokta olan ürünlerin listelendigini dogrular
+    Then Kullanici Elektrikli urunler  sekmesine tiklar
+    Then Kullanici Stokta Var kutucuguna tiklar
+    Then Kullanici stokta olan urunlerin listelendigini dogrular
 
 
