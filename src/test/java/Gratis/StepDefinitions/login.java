@@ -25,12 +25,12 @@ public class login {
     public void ana_sayfanin_ve_giris_yap_buttonun_gorunur_oldugunu_dogrular() {
        Assert.assertTrue(home.girisYapDropeDown.isDisplayed());
     }
-    @Then("Giris buttonuna tiklar ve giris yap segmesinin gorunur oldugunu dogrular")
-    public void giris_buttonuna_tiklar_ve_giris_yap_segmesinin_gorunur_oldugunu_dogrular() {
+    @Then("Giris buttonuna tiklar ve giris yap sekmesinin gorunur oldugunu dogrular")
+    public void giris_buttonuna_tiklar_ve_giris_yap_sekmesinin_gorunur_oldugunu_dogrular() {
        home.girisYapDropeDown.click();
     }
-    @Then("acilan dropdown menudeki giris yap segmesine tiklar")
-    public void acilan_dropdown_menudeki_giris_yap_segmesine_tiklar() {
+    @Then("acilan dropdown menudeki giris yap sekmesine tiklar")
+    public void acilan_dropdown_menudeki_giris_yap_sekmesine_tiklar() {
         home.girisYap.click();
 
     }
@@ -51,7 +51,7 @@ public class login {
     }
     @Then("{string} ve {string} bilgileri doldurulur")
     public void ve_bilgileri_doldurulur(String string, String string2) {
-       login.mail.sendKeys(string);
+       login.mail.sendKeys(ConfigReader.getProperty("mail"));
        login.password.sendKeys(ConfigReader.getProperty("password"));
 
     }
@@ -66,8 +66,8 @@ public class login {
         login.girisYap.click();
 
 }
-    @Then("Acilan pencerede kullanici segmesinde kendi isminin gorunur oldugunu dogrular")
-    public void acilan_pencerede_kullanici_segmesinde_kendi_isminin_gorunur_oldugunu_dogrular() {
+    @Then("Acilan pencerede kullanici sekmesinde kendi isminin gorunur oldugunu dogrular")
+    public void acilan_pencerede_kullanici_sekmesinde_kendi_isminin_gorunur_oldugunu_dogrular() {
 
         ReusableMethods.bekle(5);
 

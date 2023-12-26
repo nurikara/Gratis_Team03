@@ -25,4 +25,8 @@ public class Home_Page {
     public WebElement kullaniciAdi;
     @FindBy (xpath = "//a[@href=\"/logout\"]")
     public WebElement logout;
+    @FindBy (xpath = "//*[@class='category-511 mega-menu-drop ng-star-inserted']")
+    public WebElement elektrikliUrunler;
+
+
 }
