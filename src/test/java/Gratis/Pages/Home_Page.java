@@ -27,7 +27,7 @@ public class Home_Page {
     public WebElement logout;
     @FindBy (xpath = "(//*[text()='Elektrikli Ürünler'])[2]")
     public WebElement elektrikliUrunler;
-    @FindBy (xpath = "(//*[@class=\"search-input\"])[1]")
+    @FindBy (xpath = "(//*[@aria-label=Ara])[1]")
     public WebElement aramaKutusu;
 
 
