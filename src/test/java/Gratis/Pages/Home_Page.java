@@ -25,4 +25,11 @@ public class Home_Page {
     public WebElement kullaniciAdi;
     @FindBy (xpath = "//a[@href=\"/logout\"]")
     public WebElement logout;
+    @FindBy (xpath = "(//*[text()='Elektrikli Ürünler'])[2]")
+    public WebElement elektrikliUrunler;
+    @FindBy (xpath = "(//*[@class=\"search-input\"])[1]")
+    public WebElement aramaKutusu;
+
+
+
 }
