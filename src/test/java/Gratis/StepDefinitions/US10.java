@@ -16,10 +16,12 @@ public class US10 {
 
     @Then("Arama kutusuna sampuan yazar ve cikan ilk urunu  favorilerim'e ekler")
     public void aramaKutusunaSampuanYazarVeCikanIlkUrunuFavorilerimEEkler() {
-       ReusableMethods.click(home.aramaKutusu);
-        home.aramaKutusu.sendKeys("sampuan", Keys.ENTER);
+       home.kampanyalar.sendKeys(Keys.TAB,Keys.TAB,"şampuan",Keys.ENTER);
+
+
         ReusableMethods.bekle(2);
         favoriurunler.ilkfavoriurun.click();
+
     }
 
     @Then("Acilan ilk pencerede zorunlu olan istek listesi kismina sampuan yazar ve ekle butonuna tiklar")
