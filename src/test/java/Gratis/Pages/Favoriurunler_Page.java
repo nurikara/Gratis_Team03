@@ -16,6 +16,37 @@ public class Favoriurunler_Page {
     public WebElement ilkfavoriurun;
     @FindBy(xpath = " //*[@placeholder='Adı']")
     public WebElement istekListesiAdi;
+    @FindBy(xpath = "//*[@class='round-btns ng-star-inserted']")
+    public WebElement istekListesiEkle;
+    @FindBy(xpath = " //a[text()=' Favorilerim ']")
+    public WebElement favorilerim;
+    @FindBy(xpath = "//*[@class='cx-product-image is-initialized']")
+    public WebElement favoriurun;
+    @FindBy(xpath = "//*[@class='edit']")
+    public WebElement listeAdiDuzenle;
+
+    @FindBy(xpath = "//*[@class='round-btns ng-star-inserted']")
+    public WebElement istekListesiKaydet;
+
+    @FindBy(xpath = "//*[@class='delete']")
+    public WebElement sil;
+
+    @FindBy(xpath = "//*[@class='btn cc-button cc-button-primary']")
+    public WebElement istekListesiSil;
+    @FindBy(xpath = "(//*[@class='highlighted'])[2]")
+    public WebElement mesaj;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -27,9 +27,10 @@ public class Home_Page {
     public WebElement logout;
     @FindBy (xpath = "(//*[text()='Elektrikli Ürünler'])[2]")
     public WebElement elektrikliUrunler;
-    @FindBy (xpath = "(//*[@class=\"search-input\"])[1]")
+    @FindBy (xpath = "//div[@class='typeahead__field']")
     public WebElement aramaKutusu;
-
+    @FindBy (xpath = "(//a[@class='ng-star-inserted'])[4]")
+    public WebElement kampanyalar;
 
 
 }
