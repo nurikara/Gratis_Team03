@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class ReusableMethods {
 
@@ -180,4 +181,28 @@ public class ReusableMethods {
             //  Assert.assertTrue(true);
         }
 // Burada Hata var
-    }}
+    }
+
+    // Ana sekme pencere tutucusunu al
+    public static String anaSekmeHandle;
+
+    // Yeni pencere veya sekme açılmasını sağlayan işlemi gerçekleştirir
+    public static void yeniSekmeAc() {
+        anaSekmeHandle = Driver.getDriver().getWindowHandle();
+        Set<String> tumPencereTutuculari = Driver.getDriver().getWindowHandles();
+
+        for (String pencereHandle : tumPencereTutuculari) {
+            if (!pencereHandle.equals(anaSekmeHandle)) {
+                String yeniSekmeHandle = pencereHandle;
+                Driver.getDriver().switchTo().window(yeniSekmeHandle);
+                break;
+            }
+        }
+    }
+
+    // Ana sekme penceresine geri dönmek için
+    public static void anaSekmeyeGeriDon() {
+        Driver.getDriver().switchTo().window(anaSekmeHandle);
+    }
+}
+

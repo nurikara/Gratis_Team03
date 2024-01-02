@@ -7,3 +7,4 @@
       And Kullanıcı Instagram Tıklayabilir ve Kullanabilir Oldugunu Görür
       And Kullanıcı Twitter Tıklayabilir ve Kullanabilir Oldugunu Görür
       And Kullanıcı YouTube Tıklayabilir ve Kullanabilir Oldugunu Görür
+      And Sayfa kapatılır

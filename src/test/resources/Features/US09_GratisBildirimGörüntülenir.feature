@@ -7,4 +7,5 @@ Feature: US_09
     And   Kullanıcı Email Bilgisini Girer
     And   Kullanıcı Password Bilgisini Girer
     And   Kullanıcı Hesabım Tıklar
-    When   Kullanıcı Açılan Sayfada Bildirimler Tıklar ve Bildirimleri Görüntüler
+    When  Kullanıcı Açılan Sayfada Bildirimler Tıklar ve Bildirimleri Görüntüler
+    Then  sayfayı closed
